@@ -17,6 +17,11 @@ const server = http.createServer((req, res) => {
     return res.end(JSON.stringify({ ok: true, service: 'car-garage-multiplayer', rooms: rooms.size }));
   }
 
+  if (pathname === '/google8765589dce4b275b.html') {
+    res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+    return res.end('google-site-verification: google8765589dce4b275b.html');
+  }
+
   if (pathname === '/' || pathname === '/index.html') {
     fs.readFile(GAME_FILE, (err, html) => {
       if (err) {
